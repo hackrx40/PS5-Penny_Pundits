@@ -7,6 +7,9 @@ const Popularjobs = () => {
   return (
     <View>
       <Text>Popularjobs</Text>
+      <View style={styles.cardsContainer}>
+        
+      </View>
     </View>
   )
 }
