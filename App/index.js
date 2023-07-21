@@ -2,9 +2,16 @@ import { useState } from 'react';
 import { View,ScrollView,SafeAreaView } from 'react-native';
 import {Stack , useRouter} from 'expo-router';
 import Budget from './budgetPg';
+
 import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
+<<<<<<< HEAD
 import CircularProgress from 'react-native-circular-progress-indicator';
+=======
+import NumberPad from './numPad';
+
+//popular jobs is for challenges
+>>>>>>> 52f5af06a7e84b0c97ae522aa417dac3e637a67c
 
 const Home = () => {
     const router =useRouter();
@@ -34,7 +41,9 @@ const Home = () => {
             <Nearbyjobs />
         </View>
         <Budget />
+
         </ScrollView>
+
     </SafeAreaView>
     )
 }

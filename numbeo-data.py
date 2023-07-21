@@ -6,8 +6,8 @@
     HealthCare Index
     Pollution Index
 '''
-
-
+from flask import Flask, jsonify
+from flask_cors import CORS
 import requests
 # These are hard coded values - Our API key and City Name is fixed
 # Replace 'YOUR_API_KEY' with your actual Numbeo API key
@@ -42,11 +42,34 @@ def getNumbeoData(api_key, city_name, func_string):
 # Function to get monthly estimate from api
 def getMonthlyEstimate():
     resultSet = getNumbeoData(apiKey,cityName,"city_cost_estimator")
+    monthlyExpenses = {}
     estimateList = resultSet['breakdown']
     for estimate in estimateList:
         expenseCategory = estimate['category']
         amount = estimate['estimate']
         if(expenseCategory in categories):
             print("Monthly Estimate of",expenseCategory,"is: Rs.",amount)
+            monthlyExpenses[expenseCategory] = amount
+    return monthlyExpenses
 
-getMonthlyEstimate()
+
+# Function to get city specific indices
+def getIndices():
+    resultSet = getNumbeoData(apiKey,cityName,"indices")
+    print("Welcome! You are in Pune.")
+    print("Quality of Life Index: ",resultSet['quality_of_life_index'])
+    print("Healthcare Index: ",resultSet['health_care_index'])
+    print("Pollution Index:",resultSet['pollution_index'])
+
+# Function to find out if users expenses are more or less than 
+
+samples = getMonthlyEstimate()
+app = Flask(__name__)
+CORS(app)
+# Route to return sample data
+@app.route('/get_data', methods=['GET'])
+def get_data():
+    return jsonify(samples)
+
+if __name__ == '__main__':
+    app.run(debug=True)
