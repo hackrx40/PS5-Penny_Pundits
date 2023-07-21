@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { View,ScrollView,SafeAreaView } from 'react-native';
 import {Stack , useRouter} from 'expo-router';
-
+import Budget from './budgetPg';
 import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
 
@@ -32,6 +32,7 @@ const Home = () => {
             <Popularjobs />
             <Nearbyjobs />
         </View>
+        <Budget />
         </ScrollView>
     </SafeAreaView>
     )
