@@ -5,6 +5,10 @@
       "bundler": "metro"
     },
     "name": "PennyPundits",
-    "slug": "PennyPundits"
+    "slug": "PennyPundits",
+    "RNSVGSvgViewAndroid": {
+      "name": "RNSVGSvgViewAndroid"
+    }
   }
+  
 }
