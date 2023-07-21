@@ -6,6 +6,7 @@
     HealthCare Index
     Pollution Index
 '''
+import Database as sqldb
 from flask import Flask, jsonify
 from flask_cors import CORS
 import requests
@@ -47,9 +48,8 @@ def getMonthlyEstimate():
     for estimate in estimateList:
         expenseCategory = estimate['category']
         amount = estimate['estimate']
-        if(expenseCategory in categories):
-            print("Monthly Estimate of",expenseCategory,"is: Rs.",amount)
-            monthlyExpenses[expenseCategory] = amount
+        print("Monthly Estimate of",expenseCategory,"is: Rs.",amount)
+        monthlyExpenses[expenseCategory] = amount
     return monthlyExpenses
 
 
@@ -61,15 +61,21 @@ def getIndices():
     print("Healthcare Index: ",resultSet['health_care_index'])
     print("Pollution Index:",resultSet['pollution_index'])
 
-# Function to find out if users expenses are more or less than 
+# Data to send to the FE
+categoryMonthEst = getMonthlyEstimate()
+indiceInfo = getIndices()
 
-samples = getMonthlyEstimate()
 app = Flask(__name__)
 CORS(app)
 # Route to return sample data
-@app.route('/get_data', methods=['GET'])
-def get_data():
-    return jsonify(samples)
+@app.route('/getMonthEstimate', methods=['GET'])
+def getMonthEstimate():
+    return jsonify(categoryMonthEst)
+
+@app.route('/getIndiceInfo', methods=['GET'])
+def getIndiceInfo():
+    return jsonify(indiceInfo)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
