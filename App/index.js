@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { View,ScrollView,SafeAreaView,TextInput,TouchableOpacity,Linking,Button,Modal ,StyleSheet,Text} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import {Stack , useRouter} from 'expo-router';
 import Budget from './budgetPg';
 // import Profile from './profile';
@@ -38,15 +40,32 @@ const Home = () => {
         <ScrollView showsVerticalScrollIndicator={false}>
         
         <Welcome /> 
-        
-        
-        <Budget />
+        {/* <MenuProvider style={styles.container}>
+        <View>
+          <Menu>
+            <MenuTrigger style={styles.button}
+            text="Open menu" />
+            <MenuOptions>
+              <MenuOption onSelect={() => alert(` You clicked on Save`)} text="Save" />
+              <MenuOption onSelect={() => alert(`You Clicked on Delete`)}>
+                <Text style={{ color: 'red' }}>Delete</Text>
+              </MenuOption>
+              <MenuOption
+                onSelect={() => alert(`Not called`)}
+                disabled={true}
+                text="Disabled"
+              />
+            </MenuOptions>
+          </Menu>
+        </View>
+      </MenuProvider> */}
+        {/* <Budget />
         <NumberPad />
         <InputForm />
         <Api />
         <Popularjobs />
         <Rewards />
-        <LineChrts />
+        <LineChrts /> */}
         </ScrollView>
     </SafeAreaView>
     )

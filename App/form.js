@@ -4,39 +4,48 @@ import { StyleSheet, Text, View, TextInput, Button } from "react-native";
 const InputForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState(0);
+  const [age, setAge] = useState("");
   const [city, setCity] = useState("");
-  const [dependents, setDependents] = useState(0);
+  const [dependents, setDependents] = useState("");
   const [mobileNo, setMobileNo] = useState("");
   const [emailId, setEmailId] = useState("");
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    switch (name) {
-      case "firstName":
-        setFirstName(value);
-        break;
-      case "lastName":
-        setLastName(value);
-        break;
-      case "age":
-        setAge(parseInt(value));
-        break;
-      case "city":
-        setCity(value);
-        break;
-      case "dependents":
-        setDependents(parseInt(value));
-        break;
-      case "mobileNo":
-        setMobileNo(value);
-        break;
-      case "emailId":
-        setEmailId(value);
-        break;
-      default:
-        break;
-    }
+  const handleFirstNameChange = (text) => {
+    setFirstName(text);
+  };
+
+  const handleLastNameChange = (text) => {
+    setLastName(text);
+  };
+
+  const handleAgeChange = (text) => {
+    setAge(text);
+  };
+
+  const handleCityChange = (text) => {
+    setCity(text);
+  };
+
+  const handleDependentsChange = (text) => {
+    setDependents(text);
+  };
+
+  const handleMobileNoChange = (text) => {
+    setMobileNo(text);
+  };
+
+  const handleEmailIdChange = (text) => {
+    setEmailId(text);
+  };
+
+  const handleSubmit = () => {
+    console.log("First name:", firstName);
+    console.log("Last name:", lastName);
+    console.log("Age:", age);
+    console.log("City:", city);
+    console.log("Dependents:", dependents);
+    console.log("Mobile number:", mobileNo);
+    console.log("Email ID:", emailId);
   };
 
   return (
@@ -44,61 +53,49 @@ const InputForm = () => {
       <TextInput
         placeholder="First Name"
         value={firstName}
-        onChange={handleChange}
+        onChangeText={handleFirstNameChange}
         style={styles.input}
       />
       <TextInput
         placeholder="Last Name"
         value={lastName}
-        onChange={handleChange}
+        onChangeText={handleLastNameChange}
         style={styles.input}
       />
       <TextInput
         placeholder="Age"
         value={age}
-        onChange={handleChange}
+        onChangeText={handleAgeChange}
         keyboardType="number-pad"
         style={styles.input}
       />
       <TextInput
         placeholder="City"
         value={city}
-        onChange={handleChange}
+        onChangeText={handleCityChange}
         style={styles.input}
       />
       <TextInput
         placeholder="Dependents"
         value={dependents}
-        onChange={handleChange}
+        onChangeText={handleDependentsChange}
         keyboardType="number-pad"
         style={styles.input}
       />
       <TextInput
         placeholder="Mobile Number"
         value={mobileNo}
-        onChange={handleChange}
+        onChangeText={handleMobileNoChange}
         keyboardType="number-pad"
         style={styles.input}
       />
       <TextInput
         placeholder="Email ID"
         value={emailId}
-        onChange={handleChange}
+        onChangeText={handleEmailIdChange}
         style={styles.input}
       />
-      <Button
-        title="Submit"
-        onPress={() => {
-          console.log("First name:", firstName);
-          console.log("Last name:", lastName);
-          console.log("Age:", age);
-          console.log("City:", city);
-          console.log("Dependents:", dependents);
-          console.log("Mobile number:", mobileNo);
-          console.log("Email ID:", emailId);
-        }}
-        style={styles.button}
-      />
+      <Button title="Submit" onPress={handleSubmit} style={styles.button} />
     </View>
   );
 };
