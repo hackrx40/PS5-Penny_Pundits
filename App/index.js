@@ -49,8 +49,3 @@ const Home = () => {
 }
 
 export default Home;
-
-// Test push from Tejas
-// Test push from tanaya
-//Test push  Tejas #2
-// test push 
