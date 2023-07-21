@@ -26,7 +26,11 @@ const Welcome = () => {
     <View>
       <Text style={styles.userName} >Hello Vishant!!</Text>
       <Text > </Text>
-      <Text>Recent Transactions</Text>
+      <View style={{ flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    }}>
+      <Text style={{fontSize:25}}>Recent Transactions</Text>
       <Text> </Text>
       <View style={{flexDirection: 'row',
     alignItems:'center'}}>
@@ -40,6 +44,7 @@ const Welcome = () => {
         </View>
         <Text >50 $</Text>
       </View>
+      
       <View style={{flexDirection: 'row',
     alignItems:'center'}}>
         <View style={newStyles.containerForImage}>
@@ -75,6 +80,7 @@ const Welcome = () => {
           
         </View>
         <Text >50 $</Text>
+      </View>
       </View>
     </View>
   )
