@@ -5,6 +5,7 @@ import {Stack , useRouter} from 'expo-router';
 import Budget from './budgetPg';
 import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
+import NumberPad from './numPad';
 
 const Home = () => {
     const router =useRouter();
@@ -33,6 +34,9 @@ const Home = () => {
             <Nearbyjobs />
         </View>
         <Budget />
+        <View>
+            <NumberPad />
+        </View>
         </ScrollView>
     </SafeAreaView>
     )
