@@ -7,13 +7,13 @@ import styles from './welcome.style'
 
 const newStyles = StyleSheet.create({
 forimage:
-{width: 30,
-height: 30,
+{width: 40,
+height: 40,
 borderRadius: SIZES.small / 1.25,},
 containerForImage:
 {
-width: 40,
-height: 40,
+width: 60,
+height: 60,
 backgroundColor: COLORS.white,
 borderRadius: SIZES.small / 1.25,
 justifyContent: "center",
@@ -33,7 +33,7 @@ const Welcome = () => {
         <View style={newStyles.containerForImage}>
           <Image 
           source={icons.Edu}
-          resizeMode="cover"
+          resizeMode="contain"
           style={newStyles.forimage}
           />
           
