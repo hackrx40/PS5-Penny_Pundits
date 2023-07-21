@@ -22,12 +22,18 @@ import styles from './popularjobs.style'
 const Popularjobs = () => {
   return (
     <View>
+      <Text> </Text>
       
-      <Text> Daily Challenges </Text>
-      <Text> 1. Login in the app </Text>
-      <Text> 2. Check out analytics tab </Text>
-      <Text> 3. Add an expense for the day </Text>
-      <Text> 4. Check transactions </Text>
+      <Text style={[styles.text, { fontSize: 24 }, {textAlign: 'center'},] }> Daily Challenges </Text>
+      <Text> </Text>
+      <Text> </Text>
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 1. Login in the app </Text>
+      <Text> </Text>
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 2. Check out analytics tab </Text>
+      <Text> </Text>
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 3. Add an expense for the day </Text>
+      <Text> </Text>
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 4. Check transactions </Text>
       
 {/* 
       <View style={st.containerForImage}>

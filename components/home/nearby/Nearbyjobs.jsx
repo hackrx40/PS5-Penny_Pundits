@@ -6,7 +6,9 @@ import styles from './nearbyjobs.style'
 const Nearbyjobs = () => {
   return (
     <View>
-      <Text>Nearbyjobs</Text>
+      <Text></Text>
+      <Text> </Text>
+      <Text> </Text>
     </View>
   )
 }
