@@ -32,13 +32,14 @@ const Home = () => {
             padding: SIZES.medium
         }}>
             <Welcome />
-            <Popularjobs />
+           
             <Nearbyjobs />
         </View>
         <Budget />
         <NumberPad />
         <InputForm />
         <Api />
+        <Popularjobs />
         </ScrollView>
     </SafeAreaView>
     )

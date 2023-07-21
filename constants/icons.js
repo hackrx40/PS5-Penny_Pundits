@@ -20,6 +20,7 @@ import Restaurant from '../assets/icons/Restaurant.png'
 import Sport from '../assets/icons/sport.png'
 import Travel from '../assets/icons/travel.png'
 import Utilities from '../assets/icons/utilities.png'
+import coin from '../assets/icons/coin-removebg-preview.png'
 
 export default {
   Edu,
@@ -43,5 +44,6 @@ export default {
   chevronRight,
   plus,
   newMenu,
-  Vishant
+  Vishant,
+  coin
 };

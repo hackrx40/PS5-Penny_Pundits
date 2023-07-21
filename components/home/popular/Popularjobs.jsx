@@ -1,5 +1,7 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text,Image } from 'react-native'
+import { COLORS,icons,SIZES } from '../../../constants'
+
 
 import styles from './popularjobs.style'
 
@@ -28,6 +30,10 @@ const Popularjobs = () => {
       <Text> </Text>
       <Text> </Text>
       <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 1. Login in the app </Text>
+      <Image 
+      source={icons.coin}
+
+      />
       <Text> </Text>
       <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 2. Check out analytics tab </Text>
       <Text> </Text>
