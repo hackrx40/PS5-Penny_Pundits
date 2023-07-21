@@ -18,8 +18,6 @@ const ScreenHeaderBtn = ({ iconUrl , dimension  }) => {
         resizeMode="cover"
         style={styles.btnImg(dimension)}
         />
-    
-
       </TouchableOpacity>
       
     </View>

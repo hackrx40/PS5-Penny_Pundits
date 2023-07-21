@@ -7,6 +7,7 @@ import styles from './welcome.style'
 import { useState } from 'react'
 import CircularProgress from 'react-native-circular-progress-indicator';
 import axios from 'axios'
+import { useEffect } from 'react'
 import { StatusBar } from 'expo-status-bar'
 
 const {Coli}="500"
@@ -31,7 +32,7 @@ const Welcome = () => {
   const [value , setValue ] = useState(0);
   const [data, setData] = useState({});
   
-  useEffect(() => {
+    useEffect(() => {
     // Function to fetch data from the Python backend
     const fetchData = async () => {
       try {
@@ -128,7 +129,7 @@ const Welcome = () => {
       <Text>Estimated Monthly Costs for each Category:</Text>
       {Object.entries(data).map(([category, value]) => (
         <View key={category}>
-          <Text>{category} : {value}</Text>
+          <Text>{category} : Rs.{value.toFixed(2)}</Text>
         </View>
         ))}
     </View>
