@@ -19,10 +19,9 @@ const Home = () => {
                 <ScreenHeaderBtn iconUrl={icons.plus} dimension="60%"/>
             ),
             headerRight: () =>(
-                <ScreenHeaderBtn iconUrl={icons.newMenu} dimension="60%"/>
+                <ScreenHeaderBtn iconUrl={icons.Vishant} dimension="100%"/>
             ),
             headerTitle: ""
-
         }}/>
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{

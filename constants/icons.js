@@ -10,6 +10,7 @@ import chevronLeft from '../assets/icons/chevron-left.png'
 import chevronRight from '../assets/icons/chevron-right.png'
 import plus from '../assets/icons/plus.jpg'
 import newMenu from '../assets/icons/newMenu.png'
+import Vishant from '../assets/icons/vishant_photo.jpg'
 
 export default {
   heart,
@@ -23,5 +24,6 @@ export default {
   chevronLeft,
   chevronRight,
   plus,
-  newMenu
+  newMenu,
+  Vishant
 };
