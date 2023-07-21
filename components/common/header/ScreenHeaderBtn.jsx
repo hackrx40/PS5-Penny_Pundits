@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { View, Text } from 'react-native'
 import { TouchableOpacity , Image , Modal , StyleSheet} from 'react-native'
 import {Menu , MenuOptions , MenuOption , MenuTrigger , MenuProvider } from 'react-native-popup-menu'
+import { COLORS,icons,SIZES } from '../../../constants'
 
 import styles from './screenheader.style'
 
@@ -11,16 +12,16 @@ const Newstyles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 50,
+    paddingTop: 10,
     backgroundColor: '#ecf0f1',
   },
   button:{
-  backgroundColor: 'lightblue',
+  backgroundColor: 'transparent',
   padding: 15,
   borderRadius: 5,
   textalign: 'center',
   display: 'flex',
-  fontsize: 16,
+  fontsize: 50,
   margin: 4,
   }
 });
@@ -41,7 +42,8 @@ const ScreenHeaderBtn = ({ iconUrl , dimension  }) => {
         <View>
           <Menu>
             <MenuTrigger style={Newstyles.button}
-            text="Open menu" />
+            text="+" 
+            />
             <MenuOptions>
               <MenuOption onSelect={() => alert(` You clicked on Save`)} text="Save" />
               <MenuOption onSelect={() => alert(`You Clicked on Delete`)}>

@@ -13,26 +13,9 @@ import Rewards from './Rewards';
 import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
 import NumberPad from './numPad';
-import {Menu , MenuOptions , MenuOption , MenuTrigger , MenuProvider } from 'react-native-popup-menu'
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-      paddingTop: 50,
-      backgroundColor: '#ecf0f1',
-    },
-    button:{
-    backgroundColor: 'lightblue',
-    padding: 15,
-    borderRadius: 5,
-    textalign: 'center',
-    display: 'flex',
-    fontsize: 16,
-    margin: 4,
-    }
-  });
+
+
 
 
 const Home = () => {
@@ -57,7 +40,7 @@ const Home = () => {
         <ScrollView showsVerticalScrollIndicator={false}>
         
         <Welcome /> 
-        <MenuProvider style={styles.container}>
+        {/* <MenuProvider style={styles.container}>
         <View>
           <Menu>
             <MenuTrigger style={styles.button}
@@ -75,7 +58,7 @@ const Home = () => {
             </MenuOptions>
           </Menu>
         </View>
-      </MenuProvider>
+      </MenuProvider> */}
         {/* <Budget />
         <NumberPad />
         <InputForm />
