@@ -34,13 +34,13 @@ const Popularjobs = () => {
     <View >
       <Text> </Text>
       
-      <Text style={[styles.text, { fontSize: 24 }, {textAlign: 'center'},] }> Daily Challenges </Text>
+      <Text style={[styles.text, { fontSize: 24 }, {textAlign: 'center'}, {fontWeight: 'bold'}] }> Daily Challenges </Text>
       {/* <Text> </Text> */}
       {/* <Text> </Text> */}
 
       
       
-      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 1. Login in the app</Text>
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'},{fontWeight: 'bold'}]}> 1. Login in the app</Text>
        
       <View style={{flexDirection: 'row',
     alignItems:'center'}}>
@@ -49,7 +49,7 @@ const Popularjobs = () => {
       source={icons.coin}
       style={st.image}  />
      </View> 
-      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>100</Text> 
+      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"},{fontWeight: 'bold'} ]}>100</Text> 
       
 
       </View>
@@ -57,7 +57,7 @@ const Popularjobs = () => {
       
       <Text> </Text>
 
-      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 2. Check out analytics tab </Text>
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'},{fontWeight: 'bold'}]}> 2. Check out analytics tab </Text>
       
       <View style={{flexDirection: 'row',
     alignItems:'center'}}>
@@ -66,14 +66,14 @@ const Popularjobs = () => {
       source={icons.coin}
       style={st.image}  />
      </View> 
-      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>100</Text> 
+      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"},{fontWeight: 'bold'} ]}>100</Text> 
       
 
       </View>
       
       <Text> </Text>
 
-      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 3. Add an expense for the day </Text>
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}, {fontWeight: 'bold'}]}> 3. Add an expense for the day </Text>
 
         <View style={{flexDirection: 'row',
     alignItems:'center'}}>
@@ -82,13 +82,13 @@ const Popularjobs = () => {
       source={icons.coin}
       style={st.image}  />
      </View> 
-      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>100</Text> 
+      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"},{fontWeight: 'bold'} ]}>100</Text> 
       
 
       </View>
       <Text> </Text>
 
-      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 4. Daily Bonus </Text>
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}, {fontWeight: 'bold'}]}> 4. Daily Bonus </Text>
         <View style={{flexDirection: 'row',
     alignItems:'center'}}>
        <View >
@@ -96,7 +96,7 @@ const Popularjobs = () => {
       source={icons.coin}
       style={st.image}  />
      </View> 
-      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>100</Text> 
+      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ,{fontWeight: 'bold'}]}>100</Text> 
       
 
       </View>

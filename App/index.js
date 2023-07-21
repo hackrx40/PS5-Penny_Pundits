@@ -35,14 +35,14 @@ const Home = () => {
         }}>
             <Welcome />
            
-            <Nearbyjobs />
+            
         </View>
         <Budget />
         <NumberPad />
         <InputForm />
         <Api />
         <Popularjobs />
-        
+        <Nearbyjobs />
         </ScrollView>
     </SafeAreaView>
     )
