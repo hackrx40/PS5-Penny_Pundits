@@ -6,14 +6,15 @@ import { StyleSheet } from 'react-native'
 import styles from './welcome.style'
 
 const newStyles = StyleSheet.create({
-forimage:
-{width: 30,
-height: 30,
-borderRadius: SIZES.small / 1.25,},
+forimage: (dimension) => (
+  {width: 50,
+  height: 50,
+  borderRadius: SIZES.xSmall / 1.25,}),
+
 containerForImage:
 {
-width: 40,
-height: 40,
+width: 60,
+height: 60,
 backgroundColor: COLORS.white,
 borderRadius: SIZES.small / 1.25,
 justifyContent: "center",
@@ -21,20 +22,22 @@ alignItems: "center",
 }
 })
 
-const Welcome = () => {
+const Welcome = (dimension) => {
   return (
     <View>
       <Text style={styles.userName} >Hello Vishant!!</Text>
       <Text > </Text>
       <Text>Recent Transactions</Text>
       <Text> </Text>
-      <View style={{flexDirection: 'row',
-    alignItems:'center'}}>
+      
+      <View style={{
+        flexDirection: 'row',
+    alignItems:'center'}} dimension="50%">
         <View style={newStyles.containerForImage}>
           <Image 
           source={icons.Edu}
-          resizeMode="cover"
-          style={newStyles.forimage}
+          resizeMode="contain"
+          style={newStyles.forimage(dimension)}
           />
           
         </View>
