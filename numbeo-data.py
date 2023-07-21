@@ -49,4 +49,15 @@ def getMonthlyEstimate():
         if(expenseCategory in categories):
             print("Monthly Estimate of",expenseCategory,"is: Rs.",amount)
 
+# Function to get city specific indices
+def getIndices():
+    resultSet = getNumbeoData(apiKey,cityName,"indices")
+    print("Welcome! You are in Pune.")
+    print("Quality of Life Index: ",resultSet['quality_of_life_index'])
+    print("Healthcare Index: ",resultSet['health_care_index'])
+    print("Pollution Index:",resultSet['pollution_index'])
+
+
+
 getMonthlyEstimate()
+getIndices()
