@@ -19,7 +19,7 @@ const Home = () => {
                 <ScreenHeaderBtn iconUrl={icons.plus} dimension="60%"/>
             ),
             headerRight: () =>(
-                <ScreenHeaderBtn iconUrl={icons.menu} dimension="100%"/>
+                <ScreenHeaderBtn iconUrl={icons.newMenu} dimension="60%"/>
             ),
             headerTitle: ""
 
@@ -42,5 +42,5 @@ export default Home;
 
 // Test push from Tejas
 // Test push from tanaya
-//Test push from Tejas #2
+//Test push  Tejas #2
 // test push 
