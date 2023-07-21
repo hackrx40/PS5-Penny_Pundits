@@ -71,7 +71,7 @@ const Budget = () => {
                                         Groceries
                                     </Text>
                                     <TouchableOpacity style={styles.button_attribute}>
-                                        Set-Budget
+                                        <Text>Set-Budget</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -81,7 +81,7 @@ const Budget = () => {
                                         Restaurant
                                     </Text>
                                     <TouchableOpacity style={styles.button_attribute}>
-                                        Set-Budget
+                                        <Text>Set-Budget</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -91,7 +91,7 @@ const Budget = () => {
                                         Rent
                                     </Text>
                                     <TouchableOpacity style={styles.button_attribute}>
-                                        Set-Budget
+                                        <Text>Set-Budget</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -101,7 +101,7 @@ const Budget = () => {
                                         TextTravel
                                     </Text>
                                     <TouchableOpacity style={styles.button_attribute}>
-                                        Set-Budget
+                                        <Text>Set-Budget</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -111,7 +111,7 @@ const Budget = () => {
                                         Entertainment
                                     </Text>
                                     <TouchableOpacity style={styles.button_attribute}>
-                                        Set-Budget
+                                        <Text>Set-Budget</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -121,7 +121,7 @@ const Budget = () => {
                                         Health
                                     </Text>
                                     <TouchableOpacity style={styles.button_attribute}>
-                                        Set-Budget
+                                        <Text>Set-Budget</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -130,8 +130,8 @@ const Budget = () => {
                                     <Text>
                                         Sport
                                     </Text>
-                                    <TouchableOpacity style={styles.button_attribute}> 
-                                        Set-Budget
+                                    <TouchableOpacity style={styles.button_attribute}>
+                                        <Text>Set-Budget</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -167,11 +167,11 @@ const styles = StyleSheet.create({
     borderBox: {
         // width: 'auto',
     },
-    button_attribute: { 
-        backgroundColor : 'aqua',
-        border : '1px solid black',
-        borderRadius : '8px;',
-        fontSize : '20px',
+    button_attribute: {
+        backgroundColor: 'aqua',
+        border: '1px solid black',
+        // borderRadius: '8px;',
+        fontSize: '20px',
     }
 });
 export default Budget
