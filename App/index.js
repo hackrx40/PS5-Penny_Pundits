@@ -3,6 +3,7 @@ import { View,ScrollView,SafeAreaView } from 'react-native';
 import {Stack , useRouter} from 'expo-router';
 import Budget from './budgetPg';
 // import Profile from './profile';
+import DropDown from './DropDown';
 import InputForm from './form';
 import Api from './testapi';
 import Rewards from './Rewards';
@@ -46,6 +47,8 @@ const Home = () => {
         <Api />
         <Popularjobs />
         <Rewards />
+        <DropDown />
+        
         </ScrollView>
     </SafeAreaView>
     )
