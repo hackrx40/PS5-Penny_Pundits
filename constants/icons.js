@@ -21,9 +21,11 @@ import Sport from '../assets/icons/sport.png'
 import Travel from '../assets/icons/travel.png'
 import Utilities from '../assets/icons/utilities.png'
 import coin from '../assets/icons/coin-removebg-preview.png'
+import coupon from '../assets/icons/coupon.png'
 
 export default {
   Edu,
+  coupon,
   entertainment,
   Groceries,
   Health,
