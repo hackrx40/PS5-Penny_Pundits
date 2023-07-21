@@ -59,45 +59,61 @@ const Budget = () => {
                     </View>
                     <View style={styles.container}>
                         <Text style={styles.title}>Categories</Text>
-                        <ScrollView>
+                        <ScrollView style={styles.borderBox}>
                             <TouchableOpacity>
                                 <View>
-                                Groceries
+                                    <Text>
+                                        Groceries
+                                    </Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View>
-                                Restaurant
+                                    <Text>
+                                        Restaurant
+                                    </Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View>
-                                Rent
+                                    <Text>
+                                        Rent
+                                    </Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View>
-                                Travel
+                                    <Text>
+                                        TextTravel
+                                    </Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View>
-                                Entertainment
+                                    <Text>
+                                        Entertainment
+                                    </Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View>
-                                Health
+                                    <Text>
+                                        Health
+                                    </Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View>
-                                Sport
+                                    <Text>
+                                        Sport
+                                    </Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View>
-                                    Education
+                                    <Text>
+                                        Education
+                                    </Text>
                                 </View>
                             </TouchableOpacity>
                         </ScrollView>
@@ -111,7 +127,10 @@ const Budget = () => {
 const styles = StyleSheet.create({
     h1: {
         fontFamily: FONT.bold,
-        fontSize: SIZES.xLarge,
+        fontSize: SIZES.xxLarge,
     },
+    borderBox: {
+        border: '1px solid black',
+    }
 });
 export default Budget
