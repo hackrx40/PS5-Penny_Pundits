@@ -9,7 +9,7 @@ const App = () => {
     // Function to fetch data from the Python backend
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/get_data');
+        const response = await axios.get('http://127.0.0.1:5000/getMonthEstimate');
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -21,6 +21,7 @@ const App = () => {
 
   return (
     <View>
+      
       {Object.entries(data).map(([category, value]) => (
         <View key={category}>
           <Text>Category: {category}</Text>

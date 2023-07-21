@@ -6,7 +6,11 @@ import { StyleSheet } from 'react-native'
 import styles from './welcome.style'
 import { useState } from 'react'
 import CircularProgress from 'react-native-circular-progress-indicator';
+import axios from 'axios'
+import { useEffect } from 'react'
 import { StatusBar } from 'expo-status-bar'
+
+const {Coli}="500"
 
 const newStyles = StyleSheet.create({
 forimage:
@@ -26,6 +30,21 @@ alignItems: "center",
 
 const Welcome = () => {
   const [value , setValue ] = useState(0);
+  const [data, setData] = useState({});
+  
+    useEffect(() => {
+    // Function to fetch data from the Python backend
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://127.0.0.1:5000/getMonthEstimate');
+        setData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <View>
       <Text style={styles.userName} >Hello Vishant!!</Text>
@@ -105,7 +124,16 @@ const Welcome = () => {
         <Text >50 $</Text>
       </View>
       </View>
+      <View>
+      <View>Know Your City!</View>
+      <Text>Estimated Monthly Costs for each Category:</Text>
+      {Object.entries(data).map(([category, value]) => (
+        <View key={category}>
+          <Text>{category} : Rs.{value.toFixed(2)}</Text>
+        </View>
+        ))}
     </View>
+  </View>
   )
 }
 
