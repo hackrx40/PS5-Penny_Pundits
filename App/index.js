@@ -3,17 +3,11 @@ import { View,ScrollView,SafeAreaView } from 'react-native';
 import {Stack , useRouter} from 'expo-router';
 import Budget from './budgetPg';
 import InputForm from './form';
+import Api from './testapi';
 
 import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
-
-import CircularProgress from 'react-native-circular-progress-indicator';
-
 import NumberPad from './numPad';
-
-//popular jobs is for challenges
-
-
 const Home = () => {
     const router =useRouter();
     return(
@@ -44,8 +38,8 @@ const Home = () => {
         <Budget />
         <NumberPad />
         <InputForm />
+        <Api />
         </ScrollView>
-
     </SafeAreaView>
     )
 }
