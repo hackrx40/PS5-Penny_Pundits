@@ -19,10 +19,9 @@ const Home = () => {
                 <ScreenHeaderBtn iconUrl={icons.plus} dimension="60%"/>
             ),
             headerRight: () =>(
-                <ScreenHeaderBtn iconUrl={icons.menu} dimension="100%"/>
+                <ScreenHeaderBtn iconUrl={icons.Vishant} dimension="100%"/>
             ),
             headerTitle: ""
-
         }}/>
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{
@@ -42,5 +41,5 @@ export default Home;
 
 // Test push from Tejas
 // Test push from tanaya
-//Test push from Tejas #2
+//Test push  Tejas #2
 // test push 
