@@ -8,6 +8,7 @@
 
     SQL db calls
 '''
+
 import Database as sqldb
 from flask import Flask, jsonify
 from flask_cors import CORS
@@ -103,7 +104,6 @@ def getIncMonth():
 @app.route('/getSaveMonth', methods=['GET'])
 def getSaveMonth():
     return jsonify(saveMonth)
-
 
 if __name__ == '__main__':
     app.run(debug=True)

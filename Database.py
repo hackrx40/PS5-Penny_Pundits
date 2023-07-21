@@ -172,7 +172,7 @@ def monthly_income(month):
 #returns expense of the mentioned month
 def monthly_expense(month):
     month_dict=month_wise_date()
-    sql_query = "SELECT * FROM transaction WHERE transdate BETWEEN %s AND %s"
+    sql_query = "SELECT * FROM transaction WHERE transdate   %s AND %s"
     date_range=(month_dict[month][0], month_dict[month][1])
     cursor.execute(sql_query, date_range)
     result_set = cursor.fetchall()
@@ -220,7 +220,7 @@ def calc_variance():
     
 
 
-_db()
+create_db()
 # enter_data_budget(23, "ee", "rr")
 # enter_data_userinfo("yash", "jugade", 20, "pune", 21, 9887876, "yyyy")
 # enter_data_transaction(1, 'expense', 'Food at Home', 50.25, '2023-05-01', '12:30:00')  
