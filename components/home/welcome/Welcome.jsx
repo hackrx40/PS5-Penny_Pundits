@@ -36,11 +36,15 @@ const Welcome = () => {
       <CircularProgress 
       radius={90}
       value={85}
-      textColor='#222'
+      textColor='#0000'
       fontSize={20}
       // valueSuffix={'%'}
-      inActiveStrokeColor={'#2ecc71'}
-      inActiveStrokeOpacity={0.2}
+      inActiveStrokeColor={'#000'}
+      activeStrokeColor={'black'}
+      inActiveStrokeOpacity={0.8}
+      inActiveStrokeWidth={5}
+      duration={3000}
+      onAnimationComplete={()=>setValue(50)}
       />
       </View>
         
