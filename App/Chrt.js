@@ -1,17 +1,9 @@
 import { View, Text, Dimensions } from 'react-native';
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import { LineChart } from 'react-native-chart-kit'
 import {PieChart} from 'react-native-chart-kit'
 
 
-const data = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [
-        {
-            data: [20, 45, 28, 80, 99, 43]
-        },
-    ],
-};
 const screenWidth = Dimensions.get("window").width;
 const chartConfig = {
     backgroundGradientFrom: "#1E2923",
@@ -23,61 +15,117 @@ const chartConfig = {
     barPercentage: 0.5,
     useShadowColorFromDataset: false // optional
   };
-const data_2 = [
+
+const LineChrts = () => {
+    const [lineChartData, setLCData] = useState({});
+    const [pieChartData, setPCData] = useState({});
+
+    useEffect(() =>{
+        const fetchLCData = async() => {
+            try {
+                const response = await axios.get('http://127.0.0.1:5000/getExpMonth');
+                setLCData(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        const fetchPCData = async() => {
+            try {
+                const response = await axios.get('http://127.0.0.1:5000/getCatMonth');
+                setPCData(response.data);
+              } catch (error) {
+                console.error('Error fetching data:', error);
+              }
+        };
+        fetchPCData();
+        fetchLCData();
+  }, []);
+
+  const LCcategories = Object.keys(lineChartData);
+  const LCvalues = Object.values(lineChartData);
+  const PCdata = [
     {
-      name: "Seoul",
-      population: 21500000,
+      name: "Clothing and Shoes",
+      population: pieChartData["Clothing and Shoes"],
       color: "rgba(131, 167, 234, 1)",
       legendFontColor: "#7F7F7F",
       legendFontSize: 15
     },
     {
-      name: "Toronto",
-      population: 2800000,
+      name: "Drinks at Home",
+      population: pieChartData["Drinks at Home"],
       color: "#F00",
       legendFontColor: "#7F7F7F",
       legendFontSize: 15
     },
     {
-      name: "Beijing",
-      population: 527612,
+      name: "Food at Home",
+      population: pieChartData["Food at Home"],
       color: "red",
       legendFontColor: "#7F7F7F",
       legendFontSize: 15
     },
     {
-      name: "New York",
-      population: 8538000,
+      name: "Going out",
+      population: pieChartData["Going out"],
       color: "#ffffff",
       legendFontColor: "#7F7F7F",
       legendFontSize: 15
     },
     {
-      name: "Moscow",
-      population: 11920000,
+      name: "Leisure and Sports Memberships",
+      population: pieChartData["Leisure and Sports Memberships"],
       color: "rgb(0, 0, 255)",
       legendFontColor: "#7F7F7F",
       legendFontSize: 15
+    },
+    {
+        name: "Other Goods and Services",
+        population: pieChartData["Other Goods and Services"],
+        color: "rgb(0, 0, 255)",
+        legendFontColor: "#7F7F7F",
+        legendFontSize: 15
+    },
+    {
+        name: "Public Transport and Taxi",
+        population: pieChartData["Public Transport and Taxi"],
+        color: "rgb(0, 0, 255)",
+        legendFontColor: "#7F7F7F",
+        legendFontSize: 15
+    },
+    {
+        name: "Rent",
+        population: pieChartData["Rent"],
+        color: "rgb(0, 0, 255)",
+        legendFontColor: "#7F7F7F",
+        legendFontSize: 15
+    },
+    {
+        name: "Restaurants",
+        population: pieChartData["Restaurants"],
+        color: "rgb(0, 0, 255)",
+        legendFontColor: "#7F7F7F",
+        legendFontSize: 15
+    },
+    {
+        name: "Utilities",
+        population: pieChartData["Utilities"],
+        color: "rgb(0, 0, 255)",
+        legendFontColor: "#7F7F7F",
+        legendFontSize: 15
     }
   ];
 
-const LineChrts = () => {
+
     return (
         <View>
-            <Text>Bezier Line Chart</Text>
+            <Text>Expense Line Chart</Text>
             <LineChart
                 data={{
-                    labels: ["January", "February", "March", "April", "May", "June"],
+                    labels: LCcategories,
                     datasets: [
                         {
-                            data: [
-                                Math.random() * 100,
-                                Math.random() * 100,
-                                Math.random() * 100,
-                                Math.random() * 100,
-                                Math.random() * 100,
-                                Math.random() * 100
-                            ]
+                            data: LCvalues
                         }
                     ]
                 }}
@@ -109,7 +157,7 @@ const LineChrts = () => {
                 }}
             />
             <PieChart
-  data={data_2}
+  data={PCdata}
   width={screenWidth}
   height={220}
   chartConfig={chartConfig}

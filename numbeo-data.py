@@ -20,7 +20,6 @@ apiKey = "zlueew978sczoi"
 # Replace 'CityName' with the name of the city you want to retrieve data for
 cityName = "Pune"
 
-categories = ['Food at Home','Restaurants','Utilities','Rent']
 '''
     Helper function to get data based on function
 '''
@@ -74,11 +73,13 @@ indiceInfo = getIndices()
 
 #Create database in SQL
 sqldb.create_db()
+sqldb.add_values()
 
 # Data to send to the FE
 expMonth = sqldb.month_wise_expense()
 incMonth = sqldb.month_wise_income()
 saveMonth = sqldb.month_wise_saving()
+catMonth = sqldb.category_wise_expense('2021-05-01', '2023-05-30')
 
 app = Flask(__name__)
 CORS(app)
@@ -104,6 +105,10 @@ def getIncMonth():
 @app.route('/getSaveMonth', methods=['GET'])
 def getSaveMonth():
     return jsonify(saveMonth)
+
+@app.route('/getCatMonth', methods=['GET'])
+def getCatMonth():
+    return jsonify(catMonth)
 
 if __name__ == '__main__':
     app.run(debug=True)
