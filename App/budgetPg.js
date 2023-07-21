@@ -53,13 +53,13 @@ const Budget = () => {
             <View>
                 <SafeAreaView>
                     <View>
+                        {/* <Text> </Text>
                         <Text> </Text>
                         <Text> </Text>
                         <Text> </Text>
                         <Text> </Text>
                         <Text> </Text>
-                        <Text> </Text>
-                        <Text> </Text>
+                        <Text> </Text> */}
                         <Text style={styles.h1}>Budgets</Text>
                     </View>
                     <View>
