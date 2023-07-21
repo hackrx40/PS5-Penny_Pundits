@@ -40,6 +40,42 @@ const Welcome = () => {
         </View>
         <Text >50 $</Text>
       </View>
+      <View style={{flexDirection: 'row',
+    alignItems:'center'}}>
+        <View style={newStyles.containerForImage}>
+          <Image 
+          source={icons.Groceries}
+          resizeMode="contain"
+          style={newStyles.forimage}
+          />
+          
+        </View>
+        <Text >50 $</Text>
+      </View>
+      <View style={{flexDirection: 'row',
+    alignItems:'center'}}>
+        <View style={newStyles.containerForImage}>
+          <Image 
+          source={icons.Health}
+          resizeMode="contain"
+          style={newStyles.forimage}
+          />
+          
+        </View>
+        <Text >50 $</Text>
+      </View>
+      <View style={{flexDirection: 'row',
+    alignItems:'center'}}>
+        <View style={newStyles.containerForImage}>
+          <Image 
+          source={icons.Utilities}
+          resizeMode="contain"
+          style={newStyles.forimage}
+          />
+          
+        </View>
+        <Text >50 $</Text>
+      </View>
     </View>
   )
 }
