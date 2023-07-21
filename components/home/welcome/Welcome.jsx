@@ -4,6 +4,9 @@ import { View, Text, Image, Dimensions } from 'react-native'
 import { COLORS,icons,SIZES } from '../../../constants'
 import { StyleSheet } from 'react-native'
 import styles from './welcome.style'
+import { useState } from 'react'
+import CircularProgress from 'react-native-circular-progress-indicator';
+import { StatusBar } from 'expo-status-bar'
 
 const newStyles = StyleSheet.create({
 forimage:
@@ -22,10 +25,26 @@ alignItems: "center",
 })
 
 const Welcome = () => {
+  const [value , setValue ] = useState(0);
   return (
     <View>
       <Text style={styles.userName} >Hello Vishant!!</Text>
       <Text > </Text>
+      <View style={{flex: 1,
+    justifyContent: "center",
+    alignItems: "center",}}>
+      <CircularProgress 
+      radius={90}
+      value={85}
+      textColor='#222'
+      fontSize={20}
+      // valueSuffix={'%'}
+      inActiveStrokeColor={'#2ecc71'}
+      inActiveStrokeOpacity={0.2}
+      />
+      </View>
+        
+        
       <View style={{ flex: 1,
     justifyContent: "center",
     alignItems: "center",
