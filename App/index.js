@@ -7,7 +7,6 @@ import InputForm from './form';
 import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
 import NumberPad from './numPad';
-
 const Home = () => {
     const router =useRouter();
     return(
