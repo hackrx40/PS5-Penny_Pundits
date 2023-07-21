@@ -9,6 +9,8 @@ const Welcome = () => {
   return (
     <View>
       <Text style={styles.userName} >Hello Vishant!!</Text>
+      <Text > </Text>
+      <Text>Recent Transactions</Text>
     </View>
   )
 }
