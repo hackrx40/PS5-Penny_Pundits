@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { View,ScrollView,SafeAreaView,TextInput,TouchableOpacity,Linking,Button,Modal ,StyleSheet,Text} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import {Stack , useRouter} from 'expo-router';
 import Budget from './budgetPg';
 // import Profile from './profile';
@@ -74,14 +76,13 @@ const Home = () => {
           </Menu>
         </View>
       </MenuProvider>
-        
-        <Budget />
+        {/* <Budget />
         <NumberPad />
         <InputForm />
         <Api />
         <Popularjobs />
         <Rewards />
-        <LineChrts />
+        <LineChrts /> */}
         </ScrollView>
     </SafeAreaView>
     )
