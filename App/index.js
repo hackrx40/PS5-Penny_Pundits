@@ -11,22 +11,7 @@ import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
 import NumberPad from './numPad';
 
-const Popstyles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    popup: {
-      width: 200,
-      height: 200,
-      backgroundColor: "red",
-      borderRadius: 10,
-      position: "absolute",
-      top: 0,
-      left: 0,
-    },
-  });
+
 const Home = () => {
     const router =useRouter();
     
