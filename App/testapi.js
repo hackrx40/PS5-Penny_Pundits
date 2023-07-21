@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
 import axios from 'axios';
 
-const App = () => {
+const Api = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -31,4 +31,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Api;
