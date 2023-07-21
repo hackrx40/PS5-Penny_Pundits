@@ -9,6 +9,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
 import axios from 'axios'
 import { useEffect } from 'react'
 import { StatusBar } from 'expo-status-bar'
+import {Menu , MenuOptions , MenuOption , MenuTrigger , MenuProvider } from 'react-native-popup-menu'
 
 const {Coli}="500"
 
