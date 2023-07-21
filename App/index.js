@@ -5,6 +5,7 @@ import Budget from './budgetPg';
 // import Profile from './profile';
 import DropDown from './DropDown';
 import InputForm from './form';
+import LineChrts from './Chrt';
 import Api from './testapi';
 import Rewards from './Rewards';
 
@@ -47,7 +48,7 @@ const Home = () => {
         <Api />
         <Popularjobs />
         <Rewards />
-        
+        <LineChrts />
         </ScrollView>
     </SafeAreaView>
     )
