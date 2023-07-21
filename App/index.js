@@ -46,6 +46,7 @@ const Home = () => {
         <InputForm />
         <Api />
         <Popularjobs />
+        <Rewards />
         
         </ScrollView>
     </SafeAreaView>
