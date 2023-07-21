@@ -6,6 +6,7 @@ import Budget from './budgetPg';
 import InputForm from './form';
 import Api from './testapi';
 
+
 import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
 import NumberPad from './numPad';
@@ -41,14 +42,10 @@ const Home = () => {
         <InputForm />
         <Api />
         <Popularjobs />
+        
         </ScrollView>
     </SafeAreaView>
     )
 }
 
 export default Home;
-
-// Test push from Tejas
-// Test push from tanaya
-//Test push  Tejas #2
-// test push 

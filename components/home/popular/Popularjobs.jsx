@@ -54,11 +54,11 @@ const Popularjobs = () => {
 
       </View>
       
-      <Text> </Text>
-      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 2. Check out analytics tab 
       
-      </Text>
+      <Text> </Text>
 
+      <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 2. Check out analytics tab </Text>
+      
       <View style={{flexDirection: 'row',
     alignItems:'center'}}>
        <View >
@@ -66,56 +66,49 @@ const Popularjobs = () => {
       source={icons.coin}
       style={st.image}  />
      </View> 
-      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>200</Text> 
+      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>100</Text> 
       
 
       </View>
-
+      
       <Text> </Text>
+
       <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 3. Add an expense for the day </Text>
 
-      <View style={{flexDirection: 'row',
+        <View style={{flexDirection: 'row',
     alignItems:'center'}}>
        <View >
       <Image 
       source={icons.coin}
       style={st.image}  />
      </View> 
-      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>200</Text> 
+      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>100</Text> 
       
 
       </View>
       <Text> </Text>
+
       <Text style={[styles.text, { fontSize: 18}, {color: 'purple'}]}> 4. Daily Bonus </Text>
-      <View style={{flexDirection: 'row',
+        <View style={{flexDirection: 'row',
     alignItems:'center'}}>
        <View >
       <Image 
       source={icons.coin}
       style={st.image}  />
      </View> 
-      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>350</Text> 
+      <Text style={[styles.text, { fontSize: 16 }, {color:"blue"} ]}>100</Text> 
       
 
       </View>
       
-{/* { 
-      <View style={st.containerForImage}>
-      <Image
-       
-        source={require('assets\icon.png')}
-        style={st.image} 
-        resizeMode="contain"
-      
-      />
-          
-        </View> } */}
-      
 
       </View>
-  )
-}
+    
+      
+
+  )     
+};
 
 
 
-export default Popularjobs
+export default Popularjobs;

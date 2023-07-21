@@ -8,18 +8,17 @@ import { ScreenHeaderBtn, Welcome } from '../components';
 const Budget = () => {
 
     const [categories, setCategories] = useState([]);
-
-    function handleAddCategory(category) {
-        setCategories([Groceries,
-            Restaurant,
-            Utilities,
-            Rent,
-            Travel,
-            Entertainment,
-            Health,
-            Sport,
-            Education]);
-    }
+    // function handleAddCategory(category) {
+    //     setCategories([Groceries,
+    //         Restaurant,
+    //         Utilities,
+    //         Rent,
+    //         Travel,
+    //         Entertainment,
+    //         Health,
+    //         Sport,
+    //         Education]);
+    // }
 
     const renderCategory = ({ category }) => (
         <TouchableOpacity
@@ -31,6 +30,12 @@ const Budget = () => {
     );
 
     const router = useRouter();
+    const [CurrBud, setBud] = useState("")
+
+    // const handleChange = (key) => {
+    //     const newBud = []
+        
+    // }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
             <Stack.Screen
@@ -59,9 +64,7 @@ const Budget = () => {
                     </View>
                     <View>
                         <Text style={{ fontFamily: FONT.xLarge, textAlign: 'center' }}>
-                            -----------------
-                            NO CURRENT BUDGET
-                            -----------------
+                            {CurrBud}
                         </Text>
                     </View>
                     <View>
