@@ -31,8 +31,8 @@ const Home = () => {
             <Welcome />
             <Popularjobs />
             <Nearbyjobs />
-        <Budget />
         </View>
+        <Budget />
         </ScrollView>
     </SafeAreaView>
     )

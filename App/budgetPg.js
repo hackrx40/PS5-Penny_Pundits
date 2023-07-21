@@ -1,6 +1,6 @@
 // import { View, Text } from 'react-native';
 import { useState } from 'react';
-import { View, ScrollView, SafeAreaView, Text, StyleSheet, FlatList, TextInput, TouchableOpacity } from 'react-native';
+import { View, ScrollView, SafeAreaView, Text, StyleSheet, FlatList, TextInput, TouchableOpacity, Button } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 import { COLORS, SIZES, icons, images, FONT } from '../constants';
 import { ScreenHeaderBtn, Welcome } from '../components';
@@ -51,71 +51,100 @@ const Budget = () => {
                         <Text style={styles.h1}>Budgets</Text>
                     </View>
                     <View>
-                        <Text>
+                        <Text style={{ fontFamily: FONT.xLarge, textAlign: 'center' }}>
                             -----------------
                             NO CURRENT BUDGET
                             -----------------
                         </Text>
                     </View>
-                    <View style={styles.container}>
+                    <View>
                         <Text style={styles.title}>Categories</Text>
-                        <ScrollView style={styles.borderBox}>
-                            <TouchableOpacity>
+                        <ScrollView style={styles.borderBox}
+                            contentContainerStyle={{
+                                flexGrow: 1,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
+                            <View>
                                 <View>
                                     <Text>
                                         Groceries
                                     </Text>
+                                    <TouchableOpacity style={styles.button_attribute}>
+                                        Set-Budget
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity>
+                            </View>
+                            <View>
                                 <View>
                                     <Text>
                                         Restaurant
                                     </Text>
+                                    <TouchableOpacity style={styles.button_attribute}>
+                                        Set-Budget
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity>
+                            </View>
+                            <View>
                                 <View>
                                     <Text>
                                         Rent
                                     </Text>
+                                    <TouchableOpacity style={styles.button_attribute}>
+                                        Set-Budget
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity>
+                            </View>
+                            <View>
                                 <View>
                                     <Text>
                                         TextTravel
                                     </Text>
+                                    <TouchableOpacity style={styles.button_attribute}>
+                                        Set-Budget
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity>
+                            </View>
+                            <View>
                                 <View>
                                     <Text>
                                         Entertainment
                                     </Text>
+                                    <TouchableOpacity style={styles.button_attribute}>
+                                        Set-Budget
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity>
+                            </View>
+                            <View>
                                 <View>
                                     <Text>
                                         Health
                                     </Text>
+                                    <TouchableOpacity style={styles.button_attribute}>
+                                        Set-Budget
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity>
+                            </View>
+                            <View>
                                 <View>
                                     <Text>
                                         Sport
                                     </Text>
+                                    <TouchableOpacity style={styles.button_attribute}> 
+                                        Set-Budget
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity>
+                            </View>
+                            <View>
                                 <View>
                                     <Text>
                                         Education
                                     </Text>
+                                    <TouchableOpacity style={styles.button_attribute}>
+                                        <Text>Set-Budget</Text>
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
+                            </View>
                         </ScrollView>
                     </View>
                 </SafeAreaView>
@@ -125,12 +154,24 @@ const Budget = () => {
 }
 
 const styles = StyleSheet.create({
+    title: {
+        fontFamily: FONT.bold,
+        fontSize: SIZES.xLarge,
+        textAlign: 'center',
+    },
     h1: {
         fontFamily: FONT.bold,
         fontSize: SIZES.xxLarge,
+        textAlign: 'center',
     },
     borderBox: {
-        border: '1px solid black',
+        // width: 'auto',
+    },
+    button_attribute: { 
+        backgroundColor : 'aqua',
+        border : '1px solid black',
+        borderRadius : '8px;',
+        fontSize : '20px',
     }
 });
 export default Budget
