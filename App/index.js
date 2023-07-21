@@ -5,6 +5,9 @@ import Budget from './budgetPg';
 // import Profile from './profile';
 import InputForm from './form';
 import Api from './testapi';
+import Rewards from './Rewards';
+
+
 
 
 import {COLORS , SIZES, icons ,images } from '../constants';
@@ -42,7 +45,7 @@ const Home = () => {
         <InputForm />
         <Api />
         <Popularjobs />
-        
+        <Rewards />
         </ScrollView>
     </SafeAreaView>
     )
