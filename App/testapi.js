@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import axios from 'axios';
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
 
   useEffect(() => {
     // Function to fetch data from the Python backend
@@ -21,10 +21,10 @@ const App = () => {
 
   return (
     <View>
-      {data.map(item => (
-        <View key={item.id}>
-          <Text>Name: {item.name}</Text>
-          <Text>Price: {item.price}</Text>
+      {Object.entries(data).map(([category, value]) => (
+        <View key={category}>
+          <Text>Category: {category}</Text>
+          <Text>Value: {value}</Text>
         </View>
       ))}
     </View>
@@ -32,3 +32,9 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+
