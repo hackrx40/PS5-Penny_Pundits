@@ -8,6 +8,8 @@ import { useState } from 'react'
 import CircularProgress from 'react-native-circular-progress-indicator';
 import { StatusBar } from 'expo-status-bar'
 
+const {Coli}="500"
+
 const newStyles = StyleSheet.create({
 forimage:
 {width: 40,
@@ -27,7 +29,7 @@ alignItems: "center",
 const Welcome = () => {
   const [value , setValue ] = useState(0);
   return (
-    <View>
+    <View >
       <Text style={styles.userName} >Hello Vishant!!</Text>
       <Text > </Text>
       <View style={{flex: 1,
@@ -105,7 +107,14 @@ const Welcome = () => {
         <Text >50 $</Text>
       </View>
       </View>
+      <View>
+      <View>Know Your City</View>
+      <View>Your Location:Thane</View>
+      <View>Cost of living index:{Coli}</View>
+      <View>Estimated Monthly Costs(Single)</View></View>
     </View>
+    
+    
   )
 }
 
