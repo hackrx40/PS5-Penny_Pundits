@@ -1,10 +1,10 @@
-// import { View, Text } from 'react-native';
 import { useState } from 'react';
 import { View,ScrollView,SafeAreaView } from 'react-native';
 import {Stack , useRouter} from 'expo-router';
 import Budget from './budgetPg';
 import {COLORS , SIZES, icons ,images } from '../constants';
 import {Nearbyjobs, Popularjobs ,ScreenHeaderBtn,Welcome} from '../components';
+import CircularProgress from 'react-native-circular-progress-indicator';
 
 const Home = () => {
     const router =useRouter();
@@ -21,7 +21,8 @@ const Home = () => {
             headerRight: () =>(
                 <ScreenHeaderBtn iconUrl={icons.Vishant} dimension="100%"/>
             ),
-            headerTitle: ""
+            // headerTitle: "HELLO WORLD"
+            
         }}/>
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{
