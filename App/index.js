@@ -59,13 +59,14 @@ const Home = () => {
           </Menu>
         </View>
       </MenuProvider> */}
-        {/* <Budget />
+        <Budget />
         <NumberPad />
         <InputForm />
         <Api />
         <Popularjobs />
         <Rewards />
-        <LineChrts /> */}
+        <LineChrts />
+        <Nearbyjobs />
         </ScrollView>
     </SafeAreaView>
     )
