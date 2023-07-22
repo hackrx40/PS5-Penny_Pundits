@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Svg } from 'react-native-svg';
 import { View,ScrollView,SafeAreaView,TextInput,TouchableOpacity,Linking,Button,Modal ,StyleSheet,Text} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -59,13 +60,14 @@ const Home = () => {
           </Menu>
         </View>
       </MenuProvider> */}
-        {/* <Budget />
+        <Budget />
         <NumberPad />
         <InputForm />
         <Api />
         <Popularjobs />
         <Rewards />
-        <LineChrts /> */}
+        <LineChrts />
+        <Nearbyjobs />
         </ScrollView>
     </SafeAreaView>
     )
